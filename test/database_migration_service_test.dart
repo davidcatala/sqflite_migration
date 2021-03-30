@@ -31,7 +31,7 @@ void main() {
         expect(
           () async => await migrationHelper
               .runMigration(null, migrationFiles: ['1_migration']),
-          throwsA(predicate((exception) => exception is SqlMigrationException)),
+          throwsA(predicate((dynamic exception) => exception is SqlMigrationException)),
         );
       });
 
